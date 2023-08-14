@@ -2,7 +2,7 @@
 
 This is followup work on repo [9383761-digit-prime](https://github.com/Hermann-SW/9383761-digit-prime), which was largest known prime =1 (mod 4) at the time it was started.
 
-In August 2023 new proven prime became largest known prime =1 (mod 4):  
+On 7/25/2023 new proven prime became published largest known prime =1 (mod 4):  
 ```
 pi@pi400-64:~ $ gp -q
 ? p=polcyclo(3,-465859^1048576);
