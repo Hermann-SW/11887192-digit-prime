@@ -28,7 +28,7 @@ While first patched version of LLR software
 https://mersenneforum.org/showpost.php?p=635873&postcount=8  
 was able to determine sqrt\(-1\) \(mod 4\) for 9,383,761-digit prime in 10:45:01h on AMD 7600X CPU PC with 6 LLR threads, expected runtime for this project (with different patch)  
 https://mersenneforum.org/showpost.php?p=635984&postcount=6  
-is 6.7 days (after nearly two thirds finished allready):  
+is 6.7 days (after nearly two thirds finished already):  
 ```
 $ bc -ql
 (39488394-25030000)*0.01455/(24*3600)
