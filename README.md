@@ -207,5 +207,5 @@ hermann@7600x:~/RSA_numbers_factored/c++$
 
 ## Power consumption
 
-Total power consumption is 19.3KWh in 6,7 days, or 120.02W on average:  
+Total power consumption is 19.3KWh in 6,7 days, or 120.02W on average (with >50% green power from roof top solar collectors).  
 ![20230817_013700.part.25%.jpg](20230817_013700.part.25%25.jpg)
