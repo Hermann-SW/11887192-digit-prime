@@ -170,6 +170,42 @@ print(sqrtm1^2%p==p-1);
 hermann@7600x:~$ 
 ```
 
+## Results
+
+Constant *sqrtm1 == sqrt(-1) (mod p)* can be found in [this PARI/GP script](https://github.com/Hermann-SW/RSA_numbers_factored/blob/main/pari/sqrtm1.11887192_digit.largest_known_1mod4_prime.gp).
+
+Unique sum of squares constants *x,y* with *p == x^2 + y^2* can be found in [this C++ source](https://github.com/Hermann-SW/RSA_numbers_factored/blob/main/c%2B%2B/sqrtm1.11887192_digit.largest_known_1mod4_prime.cc).
+
+PARI/GP script computes unique sum of squares of prime *p* in only 181ms using PARI "halfgcd()" function.  
+And *sqrtm1* given *x* and *y* in 391ms:  
+```
+hermann@7600x:~/RSA_numbers_factored/pari$ gp -q < sqrtm1.11887192_digit.largest_known_1mod4_prime.gp 
+11887192-digit prime p (39488395 bits)
+[M,V] = halfgcd(sqrtm1, p)
+  ***   last result computed in 183 ms.
+[x,y] = [V[2], M[2,1]]
+  ***   last result computed in 0 ms.
+sqrtm1 = lift(Mod(x, p)/y)
+  ***   last result computed in 391 ms.
+done, all asserts OK
+hermann@7600x:~/RSA_numbers_factored/pari$ 
+```
+
+C++ code computes *sqrtm1* from *x,y* constants in 652ms.  
+And *x,y* using PARI lib "halfgcdii()" function in 190ms:  
+```
+hermann@7600x:~/RSA_numbers_factored/c++$ ./sqrtm1.11887192_digit.largest_known_1mod4_prime
+a = y^(-1) (mod p) [powm]; a *= x; a %= p
+0.651703s
+[M,V] = halfgcdii(sqrtm1, p)
+0.189161s
+[x,y] = [V[2], M[2,1]]
+0s
+done, all asserts OK
+hermann@7600x:~/RSA_numbers_factored/c++$ 
+```
+
+## Power consumption
 
 Total power consumption is 19.3KWh in 6,7 days, or 120.02W on average:  
 ![20230817_013700.part.25%.jpg](20230817_013700.part.25%25.jpg)
