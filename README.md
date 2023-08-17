@@ -104,7 +104,7 @@ f = 0x0000025ee11aff ... 53b871008dd0b854ed;
 hermann@7600x:~$
 ```
 
-I had to patch LLR with a=7, because the chosen a=3 is no quadratice non-residue (mod p):  
+I had to patch LLR with a=7, because the chosen a=3 is no quadratic non-residue (mod p):  
 ```
 hermann@7600x:~$ head -2 err
 nohup: ignoring input and appending output to 'nohup.out'
